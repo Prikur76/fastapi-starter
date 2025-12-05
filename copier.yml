@@ -86,7 +86,5 @@ _exclude:
 _answers_file: .copier/.copier-answers.yml
 
 _tasks:
-  - "cp .env.example .env"
-  - "chmod +x docker/entrypoint.sh"
   - ["{{ _copier_python }}", .copier/update_dotenv.py]
 
