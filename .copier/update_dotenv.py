@@ -7,7 +7,7 @@ import json
 root_path = Path(__file__).parent.parent
 answers_path = Path(__file__).parent / ".copier-answers.yml"
 answers = json.loads(answers_path.read_text())
-env_path = root_path / ".env"
+env_path = root_path / ".env.example"
 env_content = env_path.read_text()
 lines = []
 for line in env_content.splitlines():
