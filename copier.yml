@@ -43,11 +43,6 @@ postgres_password:
   help: PostgreSQL password
   default: "changeme"
 
-_secret_settings:
-  type: str
-  help: Secret key for JWT
-  default: "your-secret-key-here-change-in-production"
-
 _exclude:
   # Global
   - .vscode
@@ -61,19 +56,6 @@ _exclude:
   - htmlcov
   - .cache
   - .venv
-  # Frontend
-  # Logs
-  - logs
-  - "*.log"
-  - npm-debug.log*
-  - yarn-debug.log*
-  - yarn-error.log*
-  - pnpm-debug.log*
-  - lerna-debug.log*
-  - node_modules
-  - dist
-  - dist-ssr
-  - "*.local"
   # Editor directories and files
   - .idea
   - .DS_Store
