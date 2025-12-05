@@ -8,8 +8,8 @@ from alembic import context
 
 sys.path.append(os.path.join(os.path.dirname(__file__), '..', 'src'))
 
-from {{ project_name }}.db.session import Base
-from {{ project_name }}.core.config import settings
+from src.db.session import Base
+from src.core.config import settings
 
 config = context.config
 
