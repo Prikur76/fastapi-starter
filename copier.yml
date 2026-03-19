@@ -1,0 +1,92 @@
+project_name:
+  type: str
+  help: Name of your project
+  default: FastAPI Project
+
+project_description:
+  type: str
+  help: Description of your project
+  default: "FastAPI project"
+
+author_name:
+  type: str
+  help: Your name
+  default: "Your Name"
+
+author_email:
+  type: str
+  help: Your email
+  default: "your.email@example.com"
+
+python_version:
+  type: str
+  help: Python version
+  default: "3.12"
+
+postgres_version:
+  type: str
+  help: PostgreSQL version
+  default: "15"
+
+postgres_db:
+  type: str
+  help: PostgreSQL database name
+  default: "app_db"
+
+postgres_user:
+  type: str
+  help: PostgreSQL username
+  default: "app_user"
+
+postgres_password:
+  type: str
+  help: PostgreSQL password
+  default: "changeme"
+
+_secret_settings:
+  type: str
+  help: Secret key for JWT
+  default: "your-secret-key-here-change-in-production"
+
+_exclude:
+  # Global
+  - .vscode
+  - .mypy_cache
+  # Python
+  - __pycache__
+  - app.egg-info
+  - "*.pyc"
+  - .mypy_cache
+  - .coverage
+  - htmlcov
+  - .cache
+  - .venv
+  # Frontend
+  # Logs
+  - logs
+  - "*.log"
+  - npm-debug.log*
+  - yarn-debug.log*
+  - yarn-error.log*
+  - pnpm-debug.log*
+  - lerna-debug.log*
+  - node_modules
+  - dist
+  - dist-ssr
+  - "*.local"
+  # Editor directories and files
+  - .idea
+  - .DS_Store
+  - "*.suo"
+  - "*.ntvs*"
+  - "*.njsproj"
+  - "*.sln"
+  - "*.sw?"
+
+_answers_file: .copier/.copier-answers.yml
+
+_tasks:
+  - "cp .env.example .env"
+  - "chmod +x docker/entrypoint.sh"
+  - ["{{ _copier_python }}", .copier/update_dotenv.py]
+
