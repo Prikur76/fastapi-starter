@@ -1,7 +1,7 @@
 project_name:
   type: str
   help: Name of your project
-  default: FastAPI Project
+  default: "FastAPI Project"
 
 project_description:
   type: str
@@ -87,4 +87,3 @@ _answers_file: .copier/.copier-answers.yml
 
 _tasks:
   - ["{{ _copier_python }}", .copier/update_dotenv.py]
-
