@@ -53,13 +53,13 @@
 
 ### 🔹 Готовая работа с БД
 
-* SQLAlchemy 2.0 (async)
+* SQLAlchemy 2.0 (синхронный engine, пул соединений)
 * Alembic настроен через `alembic/env.py`
 * Миграции применяются при старте Docker
 
 ### 🔹 DevOps-инфраструктура
 
-* Dockerfile + Dockerfile.prod
+* Dockerfile (multi-stage)
 * docker-compose (web + PostgreSQL)
 * Healthchecks
 * Переменные окружения через `.env`
@@ -141,7 +141,7 @@ git push -u origin main
 
 ## 1. Переменные окружения
 
-После генерации будет создан `.env/example`. Уберите расширение `.example` и при необходимости внесите изменения в файл.
+Скопируйте `.env.example` в `.env` и при необходимости измените значения.
 Если его нет:
 
 ```bash

@@ -1,10 +1,10 @@
-FROM python:{{ python_version }}-slim as builder
+FROM python:{{ python_version }}-slim AS builder
 
 WORKDIR /app
 
 RUN pip install uv
 
-COPY pyproject.toml uv.lock ./
+COPY pyproject.toml .
 RUN uv pip install --system --no-cache -r pyproject.toml
 
 COPY . .

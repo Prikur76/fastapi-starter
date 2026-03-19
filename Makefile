@@ -27,11 +27,10 @@ test:
 
 lint:
 	ruff check src/ tests/
-	black --check src/ tests/
 
 format:
 	ruff check --fix src/ tests/
-	black src/ tests/
+	ruff format src/ tests/
 
 clean:
 	find . -type f -name "*.pyc" -delete
