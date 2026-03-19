@@ -90,13 +90,13 @@ pip install copier
 Сгенерировать новый проект из шаблона:
 
 ```bash
-copier copy gh:Prikur76/fastapi-starter-template new-project
+copier copy gh:Prikur76/fastapi-starter new-project --trust
 ```
 
 или локально:
 
 ```bash
-copier copy /path/to/fastapi-starter-template new-project
+copier copy /path/to/fastapi-starter new-project --trust
 ```
 
 Copier задаст параметры:
@@ -141,7 +141,7 @@ git push -u origin main
 
 ## 1. Переменные окружения
 
-После генерации будет создан `.env`.
+После генерации будет создан `.env/example`. Уберите расширение `.example` и при необходимости внесите изменения в файл.
 Если его нет:
 
 ```bash
