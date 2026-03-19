@@ -1,5 +1,5 @@
 [project]
-name = "FastAPI Project"
+name = "FastAPI_Project"
 version = "0.1.0"
 description = "Project description"
 authors = [
